@@ -1,3 +1,6 @@
 # created by virtualenv automatically
 dataset/
 datatest/
+venv/
+.idea
+__pycache__/
