@@ -1,6 +1,10 @@
+from asyncio import sleep
+
 import numpy as np
 import cv2
 import pickle
+
+from preprocessor import preprocess
 
 frameWidth = 640
 frameHeight = 480
@@ -129,7 +133,7 @@ while True:
     # PROCESS IMAGE
     img = np.asarray(imgOrignal)
     img = cv2.resize(img, (32, 32))
-    img = preprocessing(img)
+    img = preprocess(img)
     cv2.imshow("Processed Image", img)
     img = img.reshape(1, 32, 32, 1)
     cv2.putText(imgOrignal, "CLASS: ", (20, 35), font, 0.75, (0, 0, 255), 2, cv2.LINE_AA)
