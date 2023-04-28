@@ -22,5 +22,5 @@ def learning_model(classes_len):
     model.add(Dropout(0.5))
     model.add(Dense(classes_len, activation='softmax'))
 
-    model.compile(Adam(lr=0.001), loss='categorical_crossentropy', metrics=['accuracy'])
+    model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
     return model
