@@ -57,14 +57,14 @@ data_gen.fit(X_train)
 batches = data_gen.flow(X_train, y_train, batch_size=20)
 X_batch, y_batch = next(batches)
 
-# # TO SHOW AUGMENTED IMAGE SAMPLES
-# fig, axs = plt.subplots(1, 15, figsize=(20, 5))
-# fig.tight_layout()
-#
-# for i in range(15):
-#     axs[i].imshow(X_batch[i].reshape(imageDimensions[0], imageDimensions[1]))
-#     axs[i].axis('off')
-# plt.show()
+# TO SHOW AUGMENTED IMAGE SAMPLES
+fig, axs = plt.subplots(1, 15, figsize=(20, 5))
+fig.tight_layout()
+
+for i in range(15):
+    axs[i].imshow(X_batch[i].reshape(imageDimensions[0], imageDimensions[1]))
+    axs[i].axis('off')
+plt.show()
 
 y_train = to_categorical(y_train, classes_len)
 y_validation = to_categorical(y_validation, classes_len)

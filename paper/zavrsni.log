@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.29)  29 APR 2023 21:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.29)  30 APR 2023 00:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -279,33 +279,91 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count285
 \@thisrulewidth=\dimen183
 )
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 4.
+(C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.s
+ty
+\lst@mode=\count286
+\lst@gtempboxa=\box54
+\lst@token=\toks27
+\lst@length=\count287
+\lst@currlwidth=\dimen184
+\lst@column=\count288
+\lst@pos=\count289
+\lst@lostspace=\dimen185
+\lst@width=\dimen186
+\lst@newlines=\count290
+\lst@lineno=\count291
+\lst@maxwidth=\dimen187
 
- (C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
+(C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.st
+y
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count292
+\lst@skipnumbers=\count293
+\lst@framebox=\box55
+)
+(C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.c
+fg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+
+(C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.s
+ty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.
+cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+
+(C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.
+ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+
+(C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvipsnam.d
+ef
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+))
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 36
+.
+
+(C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 (C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend
 -pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count286
-\l__pdf_internal_box=\box54
+\l__color_backend_stack_int=\count294
+\l__pdf_internal_box=\box56
 ) (zavrsni.aux)
 \openout1 = `zavrsni.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -345,43 +403,81 @@ LaTeX Font Info:    ... okay on input line 4.
 (C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pd
 f.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count287
-\scratchdimen=\dimen184
-\scratchbox=\box55
-\nofMPsegments=\count288
-\nofMParguments=\count289
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count290
-\MPscratchDim=\dimen185
-\MPnumerator=\count291
-\makeMPintoPDFobject=\count292
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count295
+\scratchdimen=\dimen188
+\scratchbox=\box57
+\nofMPsegments=\count296
+\nofMParguments=\count297
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count298
+\MPscratchDim=\dimen189
+\MPnumerator=\count299
+\makeMPintoPDFobject=\count300
+\everyMPtoPDFconversion=\toks29
 )
 (C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstop
 df-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infware
+rr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+
+(C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvde
+finekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+))
+(C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions
+.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.s
+ty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys
+.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+(C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftex
+cmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-s
 ys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 15
+\c@lstlisting=\count301
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 47
 .
 
 (C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
 
 
 (C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
 
 
 (C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -391,7 +487,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {C:/Users/mpavlovic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/
 mpavlovic/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 18
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 50
 .
 
 (C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
@@ -416,37 +512,67 @@ Poglavlje 3.
 [3
 
 ]
+<images/distribution.jpeg, id=30, 804.00375pt x 602.25pt>
+File: images/distribution.jpeg Graphic file (type jpg)
+<use images/distribution.jpeg>
+Package pdftex.def Info: images/distribution.jpeg  used on input line 72.
+(pdftex.def)             Requested size: 412.56497pt x 307.98972pt.
+ [4 <./images/distribution.jpeg>] [5]
+(C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.s
+ty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Underfull \hbox (badness 10000) in paragraph at lines 80--83
+
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
+03.
+(C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+<images/image-augmentation.jpeg, id=40, 1436.36626pt x 387.4475pt>
+File: images/image-augmentation.jpeg Graphic file (type jpg)
+<use images/image-augmentation.jpeg>
+Package pdftex.def Info: images/image-augmentation.jpeg  used on input line 107
+.
+(pdftex.def)             Requested size: 412.56497pt x 109.58824pt.
+
+[6 <./images/image-augmentation.jpeg>] [7]
 Poglavlje 4.
-[4
+[8
 
 ]
 Poglavlje 5.
-[5
+[9
 
 ]
 Poglavlje 6.
 No file zavrsni.bbl.
-[6
+[10
 
-] [7] (zavrsni.aux) ) 
+] [11] (zavrsni.aux) ) 
 Here is how much of TeX's memory you used:
- 7024 strings out of 476315
- 115716 string characters out of 5785308
- 1854068 words of memory out of 5000000
- 27372 multiletter control sequences out of 15000+600000
- 559670 words of font info for 89 fonts, out of 8000000 for 9000
+ 10000 strings out of 476315
+ 160276 string characters out of 5785308
+ 1942068 words of memory out of 5000000
+ 30272 multiletter control sequences out of 15000+600000
+ 572575 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,6n,77p,1303b,240s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/mpavlovic/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/urw/courier/ucrro8a.pfb><C:/Users/mpavlovic/AppData/Local/Programs/MiKTeX/f
-onts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/mpavlovic/AppData/Local/Programs/M
-iKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/mpavlovic/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/mpavlovic/AppData/Local
-/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/mpavlovic/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on zavrsni.pdf (11 pages, 79309 bytes).
+ 72i,7n,77p,1303b,1321s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/mpavlovic/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/urw/courier/ucrb8a.pfb><C:/Users/mpavlovic/AppData/Local/Programs/MiKTeX/f
+onts/type1/urw/courier/ucrr8a.pfb><C:/Users/mpavlovic/AppData/Local/Programs/Mi
+KTeX/fonts/type1/urw/courier/ucrro8a.pfb><C:/Users/mpavlovic/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/mpavlovic/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/mpavlovic/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/mpavlovic/
+AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/mpavlo
+vic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/mp
+avlovic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on zavrsni.pdf (15 pages, 267610 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
+ 103 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

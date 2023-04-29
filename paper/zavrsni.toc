@@ -2,7 +2,11 @@
 \contentsline {chapter}{\numberline {1}Uvod}{1}{}%
 \contentsline {chapter}{\numberline {2}Pregled postojeće literature}{2}{}%
 \contentsline {chapter}{\numberline {3}Metodologija rada}{3}{}%
-\contentsline {section}{\numberline {3.1}Prikupljanje podataka za treniranje}{3}{}%
-\contentsline {chapter}{\numberline {4}Rezultati}{4}{}%
-\contentsline {chapter}{\numberline {5}Budući rad}{5}{}%
-\contentsline {chapter}{\numberline {6}Zaključak}{6}{}%
+\contentsline {section}{\numberline {3.1}Prikupljanje podataka za treniranje}{4}{}%
+\contentsline {section}{\numberline {3.2}Pretprocesiranje}{5}{}%
+\contentsline {section}{\numberline {3.3}Augmentacija skupa podataka}{6}{}%
+\contentsline {section}{\numberline {3.4}Treniranje modela}{7}{}%
+\contentsline {section}{\numberline {3.5}Testna aplikacija}{7}{}%
+\contentsline {chapter}{\numberline {4}Rezultati}{8}{}%
+\contentsline {chapter}{\numberline {5}Budući rad}{9}{}%
+\contentsline {chapter}{\numberline {6}Zaključak}{10}{}%
