@@ -12,10 +12,10 @@ def load(path):
     class_list = os.listdir(path)
     print("Total Classes Detected:", len(class_list))
     classes_len = len(class_list)
-    print("Importing Classes.....")
+    print("Importing Classes...")
     for x in range(0, classes_len):
-        myPicList = os.listdir(path + "/" + str(cnt))
-        for y in myPicList:
+        my_pic_list = os.listdir(path + "/" + str(cnt))
+        for y in my_pic_list:
             curr = cv2.imread(path + "/" + str(cnt) + "/" + y)
             images.append(curr)
             class_no.append(cnt)

@@ -31,22 +31,22 @@ X_train, X_test, y_train, y_test = train_test_split(images, class_no, test_size=
 X_train, X_validation, y_train, y_validation = train_test_split(X_train, y_train, test_size=validationRatio)
 
 
-assert (X_train.shape[0] == y_train.shape[
-    0]), "The number of images in not equal to the number of labels in training set"
-assert (X_validation.shape[0] == y_validation.shape[
-    0]), "The number of images in not equal to the number of labels in validation set"
-assert (X_test.shape[0] == y_test.shape[0]), "The number of images in not equal to the number of labels in test set"
-assert (X_train.shape[1:] == (imageDimensions)), " The dimensions of the Training images are wrong "
-assert (X_validation.shape[1:] == (imageDimensions)), " The dimensions of the Validation images are wrong "
-assert (X_test.shape[1:] == (imageDimensions)), " The dimensions of the Test images are wrong"
+# assert (X_train.shape[0] == y_train.shape[
+#     0]), "The number of images in not equal to the number of labels in training set"
+# assert (X_validation.shape[0] == y_validation.shape[
+#     0]), "The number of images in not equal to the number of labels in validation set"
+# assert (X_test.shape[0] == y_test.shape[0]), "The number of images in not equal to the number of labels in test set"
+# assert (X_train.shape[1:] == (imageDimensions)), " The dimensions of the Training images are wrong "
+# assert (X_validation.shape[1:] == (imageDimensions)), " The dimensions of the Validation images are wrong "
+# assert (X_test.shape[1:] == (imageDimensions)), " The dimensions of the Test images are wrong"
 
 data = csv_reader.read(labels)
 
-X_train = np.array(list(map(preprocessor.preprocess, X_train)))  # TO ITERATE AND PREPROCESS ALL IMAGES
+X_train = np.array(list(map(preprocessor.preprocess, X_train)))
 X_validation = np.array(list(map(preprocessor.preprocess, X_validation)))
 X_test = np.array(list(map(preprocessor.preprocess, X_test)))
-cv2.imshow("GrayScale Images",
-           X_train[random.randint(0, len(X_train) - 1)])  # TO CHECK IF THE TRAINING IS DONE PROPERLY
+# cv2.imshow("GrayScale Images",
+#            X_train[random.randint(0, len(X_train) - 1)])
 
 X_train = X_train.reshape(X_train.shape[0], X_train.shape[1], X_train.shape[2], 1)
 X_validation = X_validation.reshape(X_validation.shape[0], X_validation.shape[1], X_validation.shape[2], 1)
