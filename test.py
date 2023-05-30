@@ -85,6 +85,8 @@ while 1:
                     cv2.LINE_AA)
         cv2.putText(img_original, "Probability: " + str(round(probability * 100, 2)) + "%", (20, 75), font, 0.75, (0, 0, 255), 2,
                 cv2.LINE_AA)
+        
+
     cv2.imshow("Traffic sign classification", img_original)
 
     if cv2.waitKey(1) and 0xFF == ord('q'):

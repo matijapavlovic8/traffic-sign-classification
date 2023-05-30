@@ -10,4 +10,5 @@
 \contentsline {chapter}{\numberline {4}Rezultati}{11}{}%
 \contentsline {chapter}{\numberline {5}Budući rad}{12}{}%
 \contentsline {chapter}{\numberline {6}Zaključak}{13}{}%
-\contentsline {chapter}{Popis slika}{15}{}%
+\contentsline {chapter}{Literatura}{15}{}%
+\contentsline {chapter}{Popis slika}{16}{}%

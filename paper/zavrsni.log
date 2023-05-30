@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.29)  1 MAY 2023 15:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.29)  30 MAY 2023 17:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -336,10 +336,9 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
 ef
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
-\bibdata{literatura.bib}
-No file zavrsni.bbl.
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 40
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 39
 .
+
 (C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -351,20 +350,20 @@ File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 ) (zavrsni.aux)
 \openout1 = `zavrsni.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -466,19 +465,19 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count301
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 51
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 50
 .
 
 (C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 51.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
 
 
 (C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
 
 
 (C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -488,7 +487,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {C:/Users/mpavlovic/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/
 mpavlovic/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 54
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 53
 .
 
 (C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
@@ -507,7 +506,7 @@ Poglavlje 1.
 ]
 Poglavlje 2.
 
-Package natbib Warning: Citation `6033494' on page 2 undefined on input line 66
+Package natbib Warning: Citation `9065537' on page 2 undefined on input line 69
 .
 
 [2
@@ -520,24 +519,20 @@ Poglavlje 3.
 <images/distribution.jpeg, id=30, 804.00375pt x 602.25pt>
 File: images/distribution.jpeg Graphic file (type jpg)
 <use images/distribution.jpeg>
-Package pdftex.def Info: images/distribution.jpeg  used on input line 77.
+Package pdftex.def Info: images/distribution.jpeg  used on input line 81.
 (pdftex.def)             Requested size: 412.56497pt x 307.98972pt.
  [4 <./images/distribution.jpeg>]
 (C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.s
 ty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-
-Package natbib Warning: Citation `9642082' on page 5 undefined on input line 98
-.
-
 <images/hist1.png, id=37, 627.34375pt x 318.18875pt>
 File: images/hist1.png Graphic file (type png)
 <use images/hist1.png>
-Package pdftex.def Info: images/hist1.png  used on input line 102.
+Package pdftex.def Info: images/hist1.png  used on input line 106.
 (pdftex.def)             Requested size: 412.56497pt x 206.62683pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
+Underfull \hbox (badness 10000) in paragraph at lines 108--108
 []|\T1/ptm/m/n/10.95 So-urce: $\T1/pcr/m/n/10.95 https : / / docs . opencv . or
 g / 3 . 4 / d4 / d1b / tutorial _ histogram _
  []
@@ -545,10 +540,10 @@ g / 3 . 4 / d4 / d1b / tutorial _ histogram _
 <images/hist2.png, id=40, 625.33624pt x 197.73875pt>
 File: images/hist2.png Graphic file (type png)
 <use images/hist2.png>
-Package pdftex.def Info: images/hist2.png  used on input line 107.
+Package pdftex.def Info: images/hist2.png  used on input line 111.
 (pdftex.def)             Requested size: 412.56497pt x 126.79155pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--109
+Underfull \hbox (badness 10000) in paragraph at lines 113--113
 []|\T1/ptm/m/n/10.95 So-urce: $\T1/pcr/m/n/10.95 https : / / docs . opencv . or
 g / 3 . 4 / d4 / d1b / tutorial _ histogram _
  []
@@ -560,34 +555,25 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [5] [6 <./images/hist1.png> <./images/hist2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 114--117
+Underfull \hbox (badness 10000) in paragraph at lines 118--121
 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-37.
+41.
 (C:\Users\mpavlovic\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 <images/image-augmentation.jpeg, id=54, 1436.36626pt x 387.4475pt>
 File: images/image-augmentation.jpeg Graphic file (type jpg)
 <use images/image-augmentation.jpeg>
-Package pdftex.def Info: images/image-augmentation.jpeg  used on input line 141
+Package pdftex.def Info: images/image-augmentation.jpeg  used on input line 145
 .
 (pdftex.def)             Requested size: 412.56497pt x 109.58824pt.
 
 [7
 
- <./images/image-augmentation.jpeg>]
-
-Package natbib Warning: Citation `8308186' on page 8 undefined on input line 17
-7.
-
-
-Package natbib Warning: Citation `turner2014lecture' on page 8 undefined on inp
-ut line 178.
-
-[8] [9] [10]
+ <./images/image-augmentation.jpeg>] [8] [9] [10]
 Poglavlje 4.
 [11
 
@@ -599,7 +585,9 @@ Poglavlje 5.
 Poglavlje 6.
 [13
 
-] [14] (zavrsni.lof)
+] (zavrsni.bbl [14]) [15
+
+] (zavrsni.lof)
 \tf@lof=\write4
 \openout4 = `zavrsni.lof'.
 
@@ -607,14 +595,14 @@ Poglavlje 6.
 
 Package natbib Warning: There were undefined citations.
 
-[15
+[16
 
 ] (zavrsni.aux) ) 
 Here is how much of TeX's memory you used:
- 10055 strings out of 476315
- 161152 string characters out of 5785308
+ 10070 strings out of 476315
+ 161454 string characters out of 5785308
  2007068 words of memory out of 5000000
- 30320 multiletter control sequences out of 15000+600000
+ 30333 multiletter control sequences out of 15000+600000
  574744 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,8n,77p,1303b,1320s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -632,9 +620,9 @@ s/utmb8a.pfb><C:/Users/mpavlovic/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
 times/utmr8a.pfb><C:/Users/mpavlovic/AppData/Local/Programs/MiKTeX/fonts/type1/
 urw/times/utmr8a.pfb><C:/Users/mpavlovic/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on zavrsni.pdf (19 pages, 582571 bytes).
+Output written on zavrsni.pdf (20 pages, 588038 bytes).
 PDF statistics:
- 140 PDF objects out of 1000 (max. 8388607)
+ 143 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  45 words of extra memory for PDF output out of 10000 (max. 10000000)
 

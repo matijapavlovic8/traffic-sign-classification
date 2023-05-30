@@ -1,0 +1,35 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Albawi et~al.(2017)Albawi, Mohammed, i Al-Zawi]{8308186}
+Saad Albawi, Tareq~Abed Mohammed, i Saad Al-Zawi.
+\newblock Understanding of a convolutional neural network.
+\newblock U \emph{2017 International Conference on Engineering and Technology
+  (ICET)}, stranice 1--6, 2017.
+\newblock \doi{10.1109/ICEngTechnol.2017.8308186}.
+
+\bibitem[Celebi et~al.(2021)Celebi, Shayea, El-Saleh, Ali, i Roslee]{9642082}
+Tayfun Celebi, Ibraheem Shayea, Ayman~A. El-Saleh, Sawsan Ali, i Mardeni
+  Roslee.
+\newblock Histogram equalization for grayscale images and comparison with
+  opencv library.
+\newblock U \emph{2021 IEEE 15th Malaysia International Conference on
+  Communication (MICC)}, stranice 92--97, 2021.
+\newblock \doi{10.1109/MICC53484.2021.9642082}.
+
+\bibitem[Turner(2014)]{turner2014lecture}
+Richard~E Turner.
+\newblock Lecture 14: Convolutional neural networks for computer vision, 2014.
+
+\bibitem[Zaklouta et~al.(2011)Zaklouta, Stanciulescu, i Hamdoun]{6033494}
+Fatin Zaklouta, Bogdan Stanciulescu, i Omar Hamdoun.
+\newblock Traffic sign classification using k-d trees and random forests.
+\newblock U \emph{The 2011 International Joint Conference on Neural Networks},
+  stranice 2151--2155, 2011.
+\newblock \doi{10.1109/IJCNN.2011.6033494}.
+
+\end{thebibliography}

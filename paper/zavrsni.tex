@@ -7,6 +7,9 @@
 \usepackage{indentfirst}% -- Defining colors:
 \usepackage[dvipsnames]{xcolor}
 \usepackage{caption}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -30,8 +33,7 @@
     tabsize=2
 }% -- Setting up the custom style:
 \lstset{style=mystyle}
-\bibliography{literatura.bib}
-\bibliographystyle{fer}
+
 \definecolor{light-gray}{gray}{0.95}
 \newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
 \newcommand{\source}[1]{\caption*{Source: {#1}} }
@@ -64,8 +66,15 @@ Razvoj tehnologije u automobilskoj industriji u stopu prate i sve veći zahtjevi
 \chapter{Pregled postojeće literature}
 Klasifikacija prometnih znakova nije nov pojam u području računarske znanosti i specifičnije području računalnog vida. Shodno tome postoji velik broj znanstvenih radova koji se bave tom problematikom.
 Većina pristupa problemu klasifikacije se bazira na pristupu usmjerenom na prepoznavanje boja i oblika.\citep{6033494}
+Uz klasifikaciju prometnih znakova se često veže i pojam detekcije.
+Kad razmatramo klasifikatore koji su učestalo korišteni pri izradi sustava za detekciju prometnih znakova pronalazimo širok spektar metoda. 
+U prvom redu se ističu neuronske mreže, metode potpornih vektora, u hrvatskoj literaturi poznata i kao metoda jezgrenih funkcija, konvolucijske neuronske mreže, nasumične šume, metoda najbližih susjeda...
+Iz ovog skupa klasifikatora se za zadaće klasifikacije ipak najčešće koriste konvolucijske neuronske mreže.\citep{9065537}
+Ciresan, Meier, Masci i Schmidhuber su pak izbjegli korištenea pretpostavljenih ekstraktora značajki i zamjenili ih postupcima nadziranog učenja. Kombinacijom raznih dubokih
+neuronskih mreža treniranih na različito pretprocesiranim podatcima ostvarili su MCDNN, odnosno višestupčanu neuronsku mrežu, tako ostvarivši sustav koji je otporan na varijacije u kontrastu i osvjetljenju. \citep{CIRESAN2012333}
 \chapter{Metodologija rada}
 U poglavlju metodologija rada opisati ću metode pri izradi projekta od razine prikupljanja i prilagodbe podataka za treniranje modela strojnog učenja, kreiranje samog modela, treniranje modela te naposlijetku i izradu testne aplikacije kojom se demonstrira rad sustava.
+Isto tako detaljno ću opisati i arhitekturu same duboke neuronske mreže, argumentirati izbor aktivacijskih funkcija korištenih na izlazima iz slojeva neuronske mreže, odabir optimizatora te odabir metode za proračun pogreške predikcije modela.
 \pagebreak
 \section{Prikupljanje podataka za treniranje}
 Skup podataka za treniranje odnosno
@@ -173,15 +182,43 @@ def learning_model(classes_len):
     return model
 \end{lstlisting}
 
-Prvi sloj je Conv2D sloj od 60 filtera veličine 5x5 piksela sloj koji prima ulaz oblika 32 piksela visine, 32 piksela širine i 1 piksel dubine jer se radi o \emph{grayscale} slici.
+Prvi sloj je ulazni sloj neuronske mreže koji prima \emph{tensor} oblika (32, 32, 1), odnosno brojčanu reprezentaciju slike veličine 32*32 piksela s jednim kanalom (\emph{grayscale}). Zatim slijedi Conv2D sloj od 60 filtera veličine 5x5 piksela.
 Konvolucijski slojevi neuronske mreže povezuju uzorke na manjim lokalnim regijama sloja s uzorcima koji se pojavljuju na korespondirajućim regijama iz viših slojeva čime se eliminira potreba za stvaranjem potpune povezanosti među slojevima. \citep{8308186}
 Korištenjem nekolicine pojednostavljenja konvolucijski slojevi smanjuju broj stvorenih veza i za nekoliko redova veličine.\citep{turner2014lecture}
-Sloj koristi ReLU aktivaciju definiranu formulom: \begin{align*} &ReLU(x)= max(0,x)\\ &\frac{d}{dx}(x)\ = \{1\ if\ x>0;\ 0\ otherwise\} \end{align*}
+Sloj koristi ReLU aktivacijsku funkciju, odnosno zglobnicu definiranu formulom: \begin{align*} &ReLU(x)= max(0,x)\\ &\frac{d}{dx}(x)\ = \{1\ if\ x>0;\ 0\ otherwise\} \end{align*}
 Glavna prednost ove aktivacije je što za ulaz 0, uvijek vraća 0, što nije slučaj kod nekih zasićenih funkcija poput \emph{tanh} i \emph{sigmoid} funkcija. Ovakvo ponašanje može naštetiti treniranju modela.
-Drugi, četvrti i peti slojevi modela imaju identičnu zadaću kao i prvi te se stoga ne razmatraju detaljnije.
-Treći sloj
+Treći, peti i šesti slojevi modela imaju identičnu zadaću kao i prvi te se stoga ne razmatraju detaljnije.
+Četvrti sloj je MaxPooling2D sloj, točnije agregacijski sloj. Zadaća agregacijskih slojeva je smanjivanje reprezentacije ulaza. Agregacijski sloj korišten u ovom modelu koristi prozor veličine 2*2 piksela te od te četiri vrijednosti uzima isključivo najveću.
+Ovim postupkom se pospješuje generalizacija modela i suzbija se mogučnost stvaranja prenaučenog modela. Isto tako čini model robusnijim na translacije i pomake. Dodatni benefit se očituje i u performansama modela, zbog smanjene dimenzionalnosti računalni sustav vrši manje matričnih proračuna
+što pak pospješuje brzinu učenja modela. U kontekstu smanjenja prenaučenosti i povečanja generalizacije modela koriste se i Dropout slojevi čija je zadaća nasumično isključivanje zadanog postotka ulaznih neurona kako bi se smanjio njihov individualni utjecaj.
+Flatten sloj služi za pretvaranje višedimenzionalnih karakterističnih mapa u jednodimenzionalni vektor kako bi se omogućilo povezivanje sa slojevima potpuno povezane mreže. Konkretno, ako su ulazne karakteristične mape višedimenzionalne, poput 2D mapa dobivenih na izlazima konvolucijskih slojeva, 
+Flatten sloj će izravnati te mape u jedan vektor, čime se gube prostorne informacije, ali se omogućuje dovođenje izlaza iz prethodnog sloja na ulaz potpuno povezanih slojeva koji očekuju jednodimenzionalne ulaze. 
+Flatten sloj, dakle, osigurava da izlaz prethodnih slojeva bude u obliku pogodnom za obradu u potpuno povezanim slojevima, gdje svaki element vektora predstavlja značajku koju će mreža koristiti kako bi razriješila zadaće klasifikacije, ili u drugim primjenama regresije.
+Dense slojevi, odnosno potpuno povezani slojevi povezuju sve ulazne jedinice (neurone) s izlaznim jedinicama u prethodnom sloju.
+Dense slojevi su često korišteni kao završni slojevi u neuronskim mrežama za klasifikaciju. Izlazi Dense sloja obično predstavljaju vjerojatnosti različitih klasa u problemu klasifikacije, a aktivacijska funkcija koja se koristi na posljednjem sloju je obično softmax funkcija koja pretvara izlaze u vjerojatnosti.
+Aktivacijska funkcija korištena u posljednjem sloju je upravo gore spomenuti softmax.
+Softmax funkcija je definirana formulom: 
+\begin{eqnarray}
+\sigma(y_{i}) = \left(\frac{e^{y_{i}}}{ \sum\limits_{j} e^{y_{j}}}\right)
+j = 1,...,n
+\end{eqnarray}
 
-Model koristi optimizator Adam...
+Motivacija za odabir ove aktivacijske funkcije je njena učinkovitost kad se kao metoda izračuna pogreške, odnosno funkcija gubitka koristi \emph{categorical crossentropy}. \citep{dunne1997pairing}
+Dunne i Campbell su u svom radu "O uparivanju softmax aktivacijske funkcije i cross-entropy funkcije penalizacije", potaknuti hipotezom da postoji prirodno uparivanje te dvije funkcije pokušali empirijski potvrditi tu pretpostavku te su ostvarili izrazito pozitivne rezultate. 
+
+Model koristi Adaptive Moment Estimation optimizator, skračeno Adam. Ovaj optimizator je zapravo proširenje metode stohastičkog gradijentnog spusta.
+Adam kombinira prednosti dviju drugih tehnika optimizacije: AdaGrad, koja prilagođava stopu učenja za svaki parametar na temelju njihovih prošlih gradijenata, i RMSprop, koji koristi eksponencijalno smanjujuće promjenjive prosjeke kvadrata povijesnih gradijenata.
+Osnovna ideja iza Adama je održavanje prilagodljive stope učenja za svaki parametar estimirajući prvi moment (srednju vrijednost) i drugi moment (necentriranu varijancu) gradijenata. Ta prilagodba pomaže procesu optimizacije da brže i stabilnije konvergira.\citep{kingma2014adam}
+
+Treniranje modela se provodilo kroz 30 epoha, no pračenjem podataka o preciznosti modela postaje jasno da se model mogao trenirati i značajno kraće.
+U priloženim grafikonima se jasno vidi da već nakon 10 do 15 epoha model postiže preciznost veću od 95\%.
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth,trim=4 4 4 4,clip]{images/acc_plot.jpeg}
+  \caption{Prikaz vrijednosti izračunate preciznosti kroz epohe.}
+  \includegraphics[width=\linewidth,trim=4 4 4 4,clip]{images/loss_plot.jpeg}
+  \caption{Prikaz vrijednosti funkcije gubitka kroz epohe.}
+\end{figure} 
+
 \pagebreak
 \section{Testna aplikacija}
 Kako bi se testirala učinkovitost modela, razvijena je jednostavna testna skiripta u programskom jeziku Python. Skripta uključuje  \emph{web-kameru} računala, učitava istrenirani model te povezuje naziv svakog razreda s njegovim indeksom pomoću riječnika.
@@ -199,7 +236,16 @@ znaka te vjerojatnost s kojom model klasificira sliku znaka u pretpostavljeni ra
 \\Uz jasna ograničenja koje ovaj model testne aplikacije posjeduje (nedostatak grafičkog sučelja, uporaba ugrađene kamere umjesto zasebne kamere ili senzora), aplikacija ipak može poslužiti kao kvalitetni pokazatelj učinkovitosti i brzine kojom model vrši predikcije i daje finalni rezultat. 
 %TODO: slika izgleda ispisa
 
+
+\section{Testiranje sustava}
+
 \chapter{Rezultati}
+Početni zahtjevi koji su stavljeni pred sustav su se ponajviše bazirali na brzinu i točnost klasifikacije. Cilj je bio ostvariti točnu klasifikaciju u čim kraćem vremenu.
+Rezultati klasifikacije postignuti uporabom kreiranog modela su izrazito povezani s veličinom podskupa skupa podataka za učenje koji je sadržavao primjere klasificirane klase. Tako primjerice za znakove koji su u \emph{dataset-u} bili reprezentirani s više od 1000 primjera model primjere 
+u velikoj većini slučajeva klasificira ispravno i sa sigurnošću većom ili jednakom od 99\%. Primjere znakova koji su bili znatno manje zastupljeni u skupu podataka za učenje model i dalje, uglavnom, ispravno klasificira no sa znatno manjom sigurnošću, tek nešto iznad zadanog praga od 90\% sigurnosti.
+Vrijedi napomenuti da je navedeni prag upravo uveden kako bi se čim više smanjio broj lažno pozitivnih klasifikacija koje je model radio. Prilikom testiranja modela u uvjetima u kojima je klasifikacijski prag sigurnosti bio niži od 75\% model je često klasificirao ljudska lica, vozila i ostale
+primjere koji nisu pripadali klasi prometnh znakova. Brzina s kojom model donosi odluke je također dovoljna za klasifikaciju u stvarnom vremenu, odnosno red veličine nekoliko desetaka milisekundi.
+Naučeni model koji se koristi u klasifikaciji je poprilično agnostičan prema poremečajima osvjetljenja i kontrasta koji su uneseni tijekom ispitivanja sustava te uspješno klasificira čak i u takvim uvjetima.
 
 \chapter{Budući rad}
 Budući rad na ovom problemu bi uključivao implementaciju detekcije prometnih znakova na slici kako bi cjelokupni sustav bio što iskoristiviji u stvarnom svijetu. Nužno bi bilo uvesti i neku vrstu dediciranog senzora ili kamere koja bi imala dovoljne mogućnosti stabilizacije, 
@@ -212,20 +258,29 @@ U zaključku...
 
 
 \begin{sazetak}
-Sažetak na hrvatskom jeziku.
+Rad opisuje jednu moguću implementaciju sustava za klasifikaciju prometnih znakova u stvarnom vremenu. Razrađuju se primjene i zahtjevi sustava, opisuju se ranija ostvarenja u tom području i definira se pristup rješenju problema klasifikacije.
+Sustav klasificira prometne znakove uporabom jedne konvolucijske neronske mreže koja se sastoji od 12 slojeva. Za potrebe treniranja neuronske mreže korišteni su razni pristupi pretprocesiranja fotografija iz skupa podataka za učenje kako bi se povečao broj ulaznih podataka koje model 
+ima na raspolaganju za učenje ali i učinio model otpornijim na poremečaje u osvjetljenju i kontrastu do kojih može doći na ulazu. Istrenirani model se koristi u testnoj aplikaciji koja konstantno uzima slike s  \emph{web-kamere} prijenosnog računala, zatim te slike pokušava klasificirati te ukoliko
+s određenom sigurnošću uspije klasificirati fotografiju ispisuje rezultat na zaslon prijensnog računala.
 
 \kljucnerijeci{Klasifikacija, računalni vid, strojno učenje, duboko učenje, duboke neuronske mreže, konvolucijske neuronske mreže, prometni znakovi, promet, DNN, CNN, CV, ML}
-
 \end{sazetak}
-
-
+\pagebreak
 \engtitle{Traffic sign classification}
 \begin{abstract}
-Abstract.
+The paper describes a possible implementation of a real-time traffic sign classification system. 
+The applications and requirements of the system are discussed, previous achievements in the field are described, and an approach to solving the classification problem is defined.
+Created system classifies traffic signs using a single convolutional neural network consisting of 12 layers. 
+Various preprocessing approaches were used to augment the training dataset, increasing the number of input data available for the model to learn from and making the model more robust to disturbances in lighting and contrast that may occur at the input. 
+The trained model is used in a test application that continuously captures images from a laptop's webcam, attempts to classify those images, and if successful with a certain confidence, displays the result on the laptop's screen.
 
 \keywords{Classification, Computer Vision, Machine Learning, Deep Learning, Deep Neural Networks, Convolutional Neural Networks, Traffic Signs, Traffic, DNN, CNN, CV, ML}
 
 \end{abstract}
+
+
+\bibliography{literatura.bib}
+\bibliographystyle{fer}
 
 \listoffigures
 
