@@ -196,6 +196,7 @@ Flatten sloj će izravnati te mape u jedan vektor, čime se gube prostorne infor
 Flatten sloj, dakle, osigurava da izlaz prethodnih slojeva bude u obliku pogodnom za obradu u potpuno povezanim slojevima, gdje svaki element vektora predstavlja značajku koju će mreža koristiti kako bi razriješila zadaće klasifikacije, ili u drugim primjenama regresije.
 Dense slojevi, odnosno potpuno povezani slojevi povezuju sve ulazne jedinice (neurone) s izlaznim jedinicama u prethodnom sloju.
 Dense slojevi su često korišteni kao završni slojevi u neuronskim mrežama za klasifikaciju. Izlazi Dense sloja obično predstavljaju vjerojatnosti različitih klasa u problemu klasifikacije, a aktivacijska funkcija koja se koristi na posljednjem sloju je obično softmax funkcija koja pretvara izlaze u vjerojatnosti.
+\pagebreak
 Aktivacijska funkcija korištena u posljednjem sloju je upravo gore spomenuti softmax.
 Softmax funkcija je definirana formulom: 
 \begin{eqnarray}
@@ -211,7 +212,7 @@ Adam kombinira prednosti dviju drugih tehnika optimizacije: AdaGrad, koja prilag
 Osnovna ideja iza Adama je održavanje prilagodljive stope učenja za svaki parametar estimirajući prvi moment (srednju vrijednost) i drugi moment (necentriranu varijancu) gradijenata. Ta prilagodba pomaže procesu optimizacije da brže i stabilnije konvergira.\citep{kingma2014adam}
 
 Treniranje modela se provodilo kroz 30 epoha, no pračenjem podataka o preciznosti modela postaje jasno da se model mogao trenirati i značajno kraće.
-U priloženim grafikonima se jasno vidi da već nakon 10 do 15 epoha model postiže preciznost veću od 95\%.
+U priloženim grafikonima se jasno vidi da već nakon 10 do 15 epoha model postiže preciznost veću od 95\% na skupu za treniranje i preciznost veću od 99\% na skupu za validaciju.
 \begin{figure}[h!]
   \includegraphics[width=\linewidth,trim=4 4 4 4,clip]{images/acc_plot.jpeg}
   \caption{Prikaz vrijednosti izračunate preciznosti kroz epohe.}
@@ -237,7 +238,22 @@ znaka te vjerojatnost s kojom model klasificira sliku znaka u pretpostavljeni ra
 %TODO: slika izgleda ispisa
 
 
-\section{Testiranje sustava}
+\section{Ispitivanje sustava}
+Testiranje rada cjelokupnog sustava je provedeno u dvije faze. Prvo se nadzirala klasifikacijska preciznost na skupu podataka za validaciju, rezultati dobiveni u toj fazi ispitivanja su navedeni u poglavlju 3.4. Druga faza testiranja sustava je bazirana na ispitivanje prikladnosti sustava za provođenje klasifikacije u stvarnom vremenu.
+Pripremljeno je 42 primjera prometnih znakova. Svaki od tih primjera je podvrgnut manipulacijama svjetline, orijentacije i kontrasta. 
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth,trim=4 4 4 4,clip]{images/stop_test.jpg}
+  \caption{a) izvorna slika
+b) primjer smanjene svjetline
+c) primjer zrcaljena po vertikalnoj osi
+d) primjer povečanog kontrasta
+}
+\end{figure} 
+
+Pripremljeni materijali su postavljeni ispred \emph{web-kamere} uz dva različita stupnja ambijentalnog osvijetljenja(potpuno svijetla prostorija i polumračna prostorija). Prilikom testiranja se pokazala snažna ovisnost između performansi modela za pojedini primjer i njegove zastupljenosti u skupu podataka za treniranje.
+Promjene svjetline i kontrasta su na točnost klasifikacije djelovale s minimalnim utjecajem, no zrcaljenje primjera je za primjere koji su u skupu podataka za treniranje bili manje zastupljeni je uzrokovalo značajni pad u točnosti. Znakove koji su u \emph{datasetu} bili zastupljeni s 500 ili više primjera
+je model klasificirao ispravno u svim uvjetima sa stopom sigurnosti u klasifikacijsku odluku većom ili jednakom od 95\%. Znakove zastupljene s manje od 500, ali više od 250 primjera je ispravno klasificirao u svim uvjetima sa stopom sigurnosti između 92\% i 97\%. Performanse modela su bile najgore za znakove koji su se u \emph{datasetu}
+bili zastupljeni s 250 primjera ili manje. Pri ispitivanju takvih primjera su zrcaljeni primjeri bili prepoznati u tek nešto više od 75\% slučajeva. Bitno je napomenuti da su primjeri koji bi zrcaljeni prezentirali neki drugi znak bili preskočeni u ovoj fazi ispitivanja.
 
 \chapter{Rezultati}
 Početni zahtjevi koji su stavljeni pred sustav su se ponajviše bazirali na brzinu i točnost klasifikacije. Cilj je bio ostvariti točnu klasifikaciju u čim kraćem vremenu.
