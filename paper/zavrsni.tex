@@ -262,13 +262,14 @@ Vrijedi napomenuti da je navedeni prag upravo uveden kako bi se čim više smanj
 primjere koji nisu pripadali klasi prometnh znakova. Brzina s kojom model donosi odluke je također dovoljna za klasifikaciju u stvarnom vremenu, odnosno red veličine nekoliko desetaka milisekundi.
 Naučeni model koji se koristi u klasifikaciji je poprilično agnostičan prema poremečajima osvjetljenja i kontrasta koji su uneseni tijekom ispitivanja sustava te uspješno klasificira čak i u takvim uvjetima.
 
+
 \chapter{Budući rad}
 Budući rad na ovom problemu bi uključivao implementaciju detekcije prometnih znakova na slici kako bi cjelokupni sustav bio što iskoristiviji u stvarnom svijetu. Nužno bi bilo uvesti i neku vrstu dediciranog senzora ili kamere koja bi imala dovoljne mogućnosti stabilizacije, 
 rada u mraku i uvjetima smanjene vidljivosti (kiša, magla, snijeg...). Sljedeći korak bi bio treniranje modela na jačem \emph{hardware-u} kroz više epoha kako bi se pospiješila klasifikacija znakova. Posljednji koraci budućeg razvoja bi uključivali verzioniranje sustava za razna tržišta, primjerice
 razvoj odvojenih verzija za tržište Sjedninjenih Američkih Država zbog razlike u standardu prometnih znakova u odnosu na europske standarde za koje je trenutna aplikacija prilagođena.
 
 \chapter{Zaključak}
-U ovom završnom radu predstavljene su primjene sustava za klasifikaciju prometnih znakova i izazovi koji se javljaju prilikom implementacije istih. Implementira se model strojnog učenja baziran na konvolucijskoj neuronskoj mreži i trenira se na GTRSB skupu podataka za učenje, 
+U ovom završnom radu predstavljene su primjene sustava za klasifikaciju prometnih znakova i izazovi koji se javljaju prilikom implementacije istih. Implementira se model strojnog učenja temeljen na konvolucijskoj neuronskoj mreži i trenira se na GTSRB skupu podataka za učenje, 
 a zatim se istrenirani model koristi za klasifikaciju fotografija prometnih znakova fotografiranih \emph{web-kamerom} prijenosnog računala. Ostvareni sustav demonstrira kako i model jednostavne arhitekture, sazdan od 11 slojeva, može učinkovito klasificirati prometne znakove.
 Uzmemo li u obzir da se treniranje modela izvršavalo na ograničenom skupu podataka za treniranje i samo jednom CPU-u, zaključujemo da je čak i s ograničenim resursima moguće otvariti sustav za klasifikaciju koji je relativno otporan na poremećaje osvjetljenja, pomicanja kamere i poremećaje u kontrastu.
 Ostvareni sustav primjere klasificira dovoljno brzo i precizno za demonstrativne primjene, no njegova primjena u stvarnim uvjetima bi bila izrazito ograničena bez dodavanja specijalizirane senzorike i sustava za detekciju. 
@@ -299,6 +300,24 @@ The trained model is used in a test application that continuously captures image
 \bibliographystyle{fer}
 
 \listoffigures
+\appendix
+\chapter{Primjeri klasifikacije}
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth,trim=4 4 4 4,clip]{images/stop.jpeg}
+  \caption{Primjer klasifikacije znaka Stop}
+\end{figure}
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth,trim=4 4 4 4,clip]{images/priority_road.jpeg}
+  \caption{Primjer klasifikacije znaka Cesta s prednošću prolaska}
+\end{figure}
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth,trim=4 4 4 4,clip]{images/turn_right.jpeg}
+  \caption{Primjer klasifikacije znaka Obavezno skretanje desno}
+\end{figure}
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth,trim=4 4 4 4,clip]{images/slippery.jpeg}
+  \caption{Primjer klasifikacije znaka Skliska cesta}
+\end{figure}
 
 
 \end{document}
